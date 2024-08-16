@@ -2,11 +2,15 @@ import express from 'express';
 
 const app = express();
 const port = 4000;
+const names = ['app', 'aditya']
 
 app.get('/', (req, res) => {
   res.send('Hello, World!');
 });
 
+app.get('/names', (req, res) => {
+  res.json({names});
+});
 app.listen(port, (err, res) => {
     if (err) {
       console.error(err);
