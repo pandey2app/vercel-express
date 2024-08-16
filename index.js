@@ -15,7 +15,7 @@ app.get('/names', (req, res) => {
 });
 
 app.get('/ejs', (req, res) => {
-  res.send("./views/index.ejs");
+  res.render("index");
 });
 app.listen(port, (err, res) => {
     if (err) {
